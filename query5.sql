@@ -1,0 +1,3 @@
+SELECT COUNT(*)
+FROM Users
+WHERE Rating > 1000 AND UserID IN (SELECT UserID FROM Items);
