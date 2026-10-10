@@ -1,0 +1,14 @@
+.separator |
+.import items.dat Items
+UPDATE Items SET Buy_Price = NULL WHERE Buy_Price = 'NULL';
+UPDATE Items SET Description = NULL WHERE Description = 'NULL';
+
+.import users.dat Users
+UPDATE Users SET Location = NULL WHERE Location = 'NULL';
+UPDATE Users SET Country = NULL WHERE Country = 'NULL';
+
+.import categories.dat Categories
+.import item_categories.dat ItemCategories
+.import bids.dat Bids
+
+PRAGMA foreign_key_check;
